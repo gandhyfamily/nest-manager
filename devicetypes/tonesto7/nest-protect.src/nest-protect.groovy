@@ -1,10 +1,10 @@
 /**
  *  Nest Protect
- *	Author: Anthony S. (@tonesto7)
+ *	Author: Anthony S. (@gandhyfamily)
  *	Co-Authors: Ben W. (@desertblade), Eric S. (@E_Sch)
  *
  *	Copyright (C) 2017, 2018 Anthony S.
- * 	Licensing Info: Located at https://raw.githubusercontent.com/tonesto7/nest-manager/master/LICENSE.md
+ * 	Licensing Info: Located at https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/LICENSE.md
  */
 
 import java.text.SimpleDateFormat
@@ -14,7 +14,7 @@ preferences { }
 def devVer() { return "5.4.2" }
 
 metadata {
-	definition (name: "${textDevName()}", author: "Anthony S.", namespace: "tonesto7", ocfDeviceType: "x.com.st.d.sensor.smoke", vid: "generic-smoke-co") {
+	definition (name: "${textDevName()}", author: "Anthony S.", namespace: "gandhyfamily", ocfDeviceType: "x.com.st.d.sensor.smoke", vid: "generic-smoke-co") {
 		//capability "Polling"
 		capability "Actuator"
 		capability "Sensor"
@@ -66,40 +66,40 @@ metadata {
 			tileAttribute("device.batteryState", key: "SECONDARY_CONTROL") {
 				attributeState("default", label:'unknown', icon: "st.unknown.unknown.unknown")
 				attributeState("ok", label: "Battery: OK", backgroundColor: "#00a0dc",
-					icon: "https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/battery_ok_v.png")
+					icon: "https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/battery_ok_v.png")
 				attributeState("replace", label: "Battery: REPLACE!", backgroundColor: "#e86d13",
-					icon: "https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/battery_low_v.png")
+					icon: "https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/battery_low_v.png")
 			}
 		}
 		standardTile("main2", "device.alarmState", width: 2, height: 2) {
 			state("default", label:'--', icon: "st.unknown.unknown.unknown")
 			state("ok", label:"clear", backgroundColor:"#ffffff",
-				icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/alarm_clear.png")
+				icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/alarm_clear.png")
 			state("smoke-warning", label:"SMOKE!\nWARNING", backgroundColor:"#e8d813",
-				icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/smoke_warn.png")
+				icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/smoke_warn.png")
 			state("smoke-emergency", label:"SMOKE!", backgroundColor:"#e8d813",
-				icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/smoke_emergency.png")
+				icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/smoke_emergency.png")
 			state("co-warning", label:"CO!\nWARNING!", backgroundColor:"#e86d13",
-				icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/co_warn.png")
+				icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/co_warn.png")
 			state("co-emergency", label:"CO!", backgroundColor:"#e86d13",
-				icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/co_emergency.png")
+				icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/co_emergency.png")
 		}
 		standardTile("smoke", "device.nestSmoke", width: 2, height: 2) {
 			state("default", label:'unknown', icon: "st.unknown.unknown.unknown")
-			state("ok", icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/smoke_clear.png")
-			state("warning", icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/smoke_warn.png")
-			state("emergency", icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/smoke_emergency.png")
+			state("ok", icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/smoke_clear.png")
+			state("warning", icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/smoke_warn.png")
+			state("emergency", icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/smoke_emergency.png")
 		}
 		standardTile("carbonMonoxide", "device.nestCarbonMonoxide", width: 2, height: 2){
 			state("default", label:'unknown', icon: "st.unknown.unknown.unknown")
-			state("ok", icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/co_clear.png")
-			state("warning", icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/co_warn.png")
-			state("emergency", icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/co_emergency.png")
+			state("ok", icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/co_clear.png")
+			state("warning", icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/co_warn.png")
+			state("emergency", icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/co_emergency.png")
 		}
 		 standardTile("batteryState", "device.batteryState", width: 2, height: 2){
 			state("default", label:'unknown')
-			state("ok", icon: "https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/battery_ok.png")
-			state("replace", icon: "https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/battery_low.png")
+			state("ok", icon: "https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/battery_ok.png")
+			state("replace", icon: "https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/battery_low.png")
 		}
 		standardTile("filler", "device.filler", width: 2, height: 2){
 			state("default", label:'')
@@ -120,7 +120,7 @@ metadata {
 			state("default", label: 'Last Manual Test:\n${currentValue}')
 		}
 		standardTile("refresh", "device.refresh", width:2, height:2, decoration: "flat") {
-			state "default", action:"refresh.refresh", icon:"https://raw.githubusercontent.com/tonesto7/nest-manager/master/Images/Devices/refresh_icon.png"
+			state "default", action:"refresh.refresh", icon:"https://raw.githubusercontent.com/gandhyfamily/nest-manager/master/Images/Devices/refresh_icon.png"
 		}
 		valueTile("lastUpdatedDt", "device.lastUpdatedDt", width: 3, height: 1, decoration: "flat", wordWrap: true) {
 			state("default", label: 'Data Last Received:\n${currentValue}')
@@ -816,7 +816,7 @@ def getSmokeImg(b64=true) {
 
 def getImg(imgName) {
 	if(imgName) {
-		return imgName ? "https://cdn.rawgit.com/tonesto7/nest-manager/master/Images/Devices/$imgName" : ""
+		return imgName ? "https://cdn.rawgit.com/gandhyfamily/nest-manager/master/Images/Devices/$imgName" : ""
 	} else {
 		log.error "getImg Error: Missing imgName value..."
 	}
@@ -843,7 +843,7 @@ def getWebData(params, desc, text=true) {
 		return "${label} info not found"
 	}
 }
-def gitRepo()		{ return "tonesto7/nest-manager"}
+def gitRepo()		{ return "gandhyfamily/nest-manager"}
 def gitBranch()		{ return state?.isBeta ? "beta" : "master" }
 def gitPath()		{ return "${gitRepo()}/${gitBranch()}"}
 def devVerInfo()	{ return getWebData([uri: "https://raw.githubusercontent.com/${gitPath()}/Data/changelog_prot.txt", contentType: "text/plain; charset=UTF-8"], "changelog") }
@@ -947,7 +947,7 @@ def getInfoHtml() {
 				<meta http-equiv="pragma" content="no-cache"/>
 				<meta name="viewport" content="width = device-width, user-scalable=no, initial-scale=1.0">
 
-				<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/tonesto7/nest-manager/master/Documents/css/ST-HTML.min.css"/>
+				<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/gandhyfamily/nest-manager/master/Documents/css/ST-HTML.min.css"/>
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex.min.css" async/>
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.1.1/css/vex-theme-top.min.css" async />
 				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
